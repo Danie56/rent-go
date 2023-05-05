@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ren_go
+  profiles:
+    active: local
+
+---
+spring:
+  profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    test-on-borrow: true
+    validation-query: SELECT 1 FROM dual
+  jpa:
+    show-sql: true
+    hibernate:
+      format-sql: true
+      ddl-auto: update
