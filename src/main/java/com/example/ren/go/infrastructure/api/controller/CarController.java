@@ -16,9 +16,10 @@ public class CarController {
     private CarAplication carAplication;
 
     @PostMapping("/save_car")
-    public void saveCar (@RequestBody Car car) {
+    public String saveCar (@RequestBody Car car) {
 
         carAplication.saveCar(car);
+        return car.getPlate();
 
     }
 

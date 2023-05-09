@@ -8,6 +8,7 @@ public class CarDocument {
     private Integer id;
     private String idCar;
     private String idDocument;
-    private Boolean isChecked;
+    private Boolean isChecked ;
+
 
 }
