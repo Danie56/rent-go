@@ -4,6 +4,7 @@ import com.example.ren.go.domain.entites.Document;
 import com.example.ren.go.domain.service.DocumentService;
 import com.example.ren.go.infrastructure.dto.DocumentDTO;
 import com.example.ren.go.infrastructure.mapper.DocumentMapper;
+import com.example.ren.go.infrastructure.repository.DocumentDAO;
 import com.example.ren.go.infrastructure.repository.DocumentRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.Optional;
 @Service
 public class DocumentAdapter implements DocumentService {
     private final DocumentRepository documentRepository;
+    private final DocumentDAO documentDAO;
     private final DocumentMapper documentMapper;
     @Override
     public void saveDocument(Document documet) {
@@ -53,5 +55,10 @@ public class DocumentAdapter implements DocumentService {
 
 
 
+    }
+    @Override
+    public List<Document> getDocumentsByCar() {
+        List<Document> documents = documentDAO.getDocumentsByCar();
+        return documents;
     }
 }

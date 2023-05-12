@@ -32,6 +32,10 @@ public class DocumentAplication {
 
         return documentService.updateDocument(document, id);
     }
+    public List<Document> getDocumentsByCar(){
+
+        return documentService.getDocumentsByCar();
+    }
 
 
 
