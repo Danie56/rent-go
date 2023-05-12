@@ -57,8 +57,8 @@ public class DocumentAdapter implements DocumentService {
 
     }
     @Override
-    public List<Document> getDocumentsByCar() {
-        List<Document> documents = documentDAO.getDocumentsByCar();
+    public List<Document> getDocumentsByCar(String id) {
+        List<Document> documents = documentDAO.getDocumentsByCar(id);
         return documents;
     }
 }

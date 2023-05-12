@@ -12,5 +12,5 @@ public interface DocumentService {
     List<Document> getAllDocument();
     Document updateDocument(Document document, String id);
 
-    List<Document> getDocumentsByCar();
+    List<Document> getDocumentsByCar(String id);
 }

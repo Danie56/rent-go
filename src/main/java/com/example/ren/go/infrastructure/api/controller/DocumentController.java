@@ -40,11 +40,12 @@ public class DocumentController {
     public ResponseEntity<Document> updateDocument(@RequestBody Document document, @PathVariable String id){
         return new ResponseEntity<>(documentAplication.updateDocument(document,id),HttpStatus.OK);
     }
-    @GetMapping("/get_documents_by_car")
-    public ResponseEntity<List<Document>> getDocumentsByCar(){
-        return new ResponseEntity<>(documentAplication.getDocumentsByCar(), HttpStatus.OK);
+    @GetMapping("/get_documents_by_car/{id}")
+    public ResponseEntity<List<Document>> getDocumentsByCar(@PathVariable String id){
+        return new ResponseEntity<>(documentAplication.getDocumentsByCar(id), HttpStatus.OK);
 
     }
+
 
 
 
