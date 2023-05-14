@@ -40,8 +40,8 @@ public class DocumentAdapter implements DocumentService {
 
     @Override
     public List<Document> getAllDocument() {
-        List<DocumentDTO> peoples = documentRepository.findAll();
-        return peoples.stream().map(documentMapper::toDocumentEntity).toList();
+        List<DocumentDTO> documents = documentRepository.findAll();
+        return documents.stream().map(documentMapper::toDocumentEntity).toList();
     }
 
     @Override
