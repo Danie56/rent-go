@@ -8,6 +8,8 @@ public class Car {
     private  String model;
     private  String brand;
     private  String year;
-    private  String type;
+    private  Long mileage;
+    private  String idType;
+    private StatesCarEnum statesCar;
     private  Double basePrice;
 }

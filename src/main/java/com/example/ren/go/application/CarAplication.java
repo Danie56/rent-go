@@ -3,7 +3,6 @@ package com.example.ren.go.application;
 import com.example.ren.go.domain.entites.Car;
 import com.example.ren.go.domain.service.CarService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,6 +26,12 @@ public class CarAplication {
     }
     public void deleteCar(String id){
         carService.deleteCar(id);
+    }
+    public void setType(String idCar, String idType){
+        carService.setType(idCar,idType);
+    }
+    public void setState(String idCar, String state){
+        carService.setType(idCar,state);
     }
 
 

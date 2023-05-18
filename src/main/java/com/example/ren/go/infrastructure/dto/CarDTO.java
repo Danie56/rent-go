@@ -1,7 +1,7 @@
 package com.example.ren.go.infrastructure.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.example.ren.go.domain.entites.StatesCarEnum;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -13,6 +13,12 @@ public class CarDTO {
     private  String model;
     private  String brand;
     private  String year;
-    private  String type;
+    private  Long mileage;
+    private  String idType;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "satates_car")
+    private StatesCarEnum statesCar;
     private  Double basePrice;
+
+
 }

@@ -2,8 +2,8 @@ package com.example.ren.go.infrastructure.api.controller;
 
 import com.example.ren.go.application.CarAplication;
 import com.example.ren.go.domain.entites.Car;
-import com.example.ren.go.domain.entites.Document;
 import lombok.AllArgsConstructor;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -48,6 +48,19 @@ public class CarController {
 
 
     }
+    @PutMapping("/set_type")
+    public void setType (@Param("idCar") String idCar, @Param("idType")String idType) {
+        carAplication.setType(idCar,idType);
+
+
+    }
+    @PutMapping("/set_state")
+    public void setState (@Param("idCar") String idCar, @Param("idType")String state) {
+        carAplication.setType(idCar,state);
+
+
+    }
+
 
 
 

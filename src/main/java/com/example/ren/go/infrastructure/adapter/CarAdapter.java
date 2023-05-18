@@ -1,6 +1,7 @@
 package com.example.ren.go.infrastructure.adapter;
 
 import com.example.ren.go.domain.entites.Car;
+import com.example.ren.go.domain.entites.StatesCarEnum;
 import com.example.ren.go.domain.service.CarService;
 import com.example.ren.go.infrastructure.dto.CarDTO;
 import com.example.ren.go.infrastructure.dto.DocumentDTO;
@@ -46,5 +47,23 @@ public class CarAdapter implements CarService {
     public void deleteCar(String id) {
 
         carRepository.deleteById(id);
+    }
+
+    @Override
+    public void setType(String idCar, String idType) {
+        Optional<CarDTO>carOptional = carRepository.findById(idCar);
+        Car car = carMapper.toCarEntity(carOptional.get());
+        car.setIdType(idType);
+        carRepository.save(carMapper.toCarDto(car));
+
+
+    }
+    public void setState(String idCar, String state) {
+        Optional<CarDTO>carOptional = carRepository.findById(idCar);
+        Car car = carMapper.toCarEntity(carOptional.get());
+        car.setStatesCar(StatesCarEnum.valueOf(state));
+        carRepository.save(carMapper.toCarDto(car));
+
+
     }
 }
