@@ -1,9 +1,7 @@
 package com.example.ren.go.application;
 
-import com.example.ren.go.domain.entites.Type;
-import com.example.ren.go.domain.entites.Type;
-import com.example.ren.go.domain.service.TypeService;
-import com.example.ren.go.domain.service.TypeService;
+import com.example.ren.go.domain.entites.car.Type;
+import com.example.ren.go.domain.service.car.TypeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
