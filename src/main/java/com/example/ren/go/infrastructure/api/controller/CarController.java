@@ -56,7 +56,7 @@ public class CarController {
     }
     @PutMapping("/set_state")
     public void setState (@Param("idCar") String idCar, @Param("idType")String state) {
-        carAplication.setType(idCar,state);
+        carAplication.setState(idCar,state);
 
 
     }

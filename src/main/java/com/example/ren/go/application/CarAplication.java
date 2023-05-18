@@ -31,7 +31,7 @@ public class CarAplication {
         carService.setType(idCar,idType);
     }
     public void setState(String idCar, String state){
-        carService.setType(idCar,state);
+        carService.setState(idCar,state);
     }
 
 
