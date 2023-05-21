@@ -1,6 +1,6 @@
 package com.example.ren.go.infrastructure.api.controller.car;
 
-import com.example.ren.go.application.DocumentAplication;
+import com.example.ren.go.application.car.DocumentAplication;
 import com.example.ren.go.domain.entites.car.Document;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -41,6 +41,7 @@ public class DocumentController {
         return new ResponseEntity<>(documentAplication.updateDocument(document,id),HttpStatus.OK);
     }
     @GetMapping("/get_documents_by_car/{id}")
+
     public ResponseEntity<List<Document>> getDocumentsByCar(@PathVariable String id){
         return new ResponseEntity<>(documentAplication.getDocumentsByCar(id), HttpStatus.OK);
 

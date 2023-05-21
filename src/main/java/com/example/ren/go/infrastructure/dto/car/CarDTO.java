@@ -16,7 +16,7 @@ public class CarDTO {
     private  Long mileage;
     private  String idType;
     @Enumerated(EnumType.STRING)
-    @Column(name = "satates_car")
+    @Column(name = "states_car")
     private StatesCarEnum statesCar;
     private  Double basePrice;
 

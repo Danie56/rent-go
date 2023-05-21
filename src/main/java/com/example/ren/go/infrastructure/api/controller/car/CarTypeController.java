@@ -1,6 +1,6 @@
 package com.example.ren.go.infrastructure.api.controller.car;
 
-import com.example.ren.go.application.CarTypeAplication;
+import com.example.ren.go.application.car.CarTypeAplication;
 import com.example.ren.go.domain.entites.car.CarType;
 import lombok.AllArgsConstructor;
 import org.springframework.data.repository.query.Param;

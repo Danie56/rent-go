@@ -1,4 +1,4 @@
-package com.example.ren.go.application;
+package com.example.ren.go.application.car;
 
 import com.example.ren.go.domain.entites.car.CarType;
 import com.example.ren.go.domain.service.car.CarTypeService;

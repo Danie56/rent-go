@@ -9,7 +9,7 @@ import org.mapstruct.MappingConstants;
 
 public interface CarMapper {
 
-    Car toCarEntity(CarDTO peopleDTO);
+    Car toCarEntity(CarDTO carDTO);
 
-    CarDTO toCarDto(Car people);
+    CarDTO toCarDto(Car car);
 }

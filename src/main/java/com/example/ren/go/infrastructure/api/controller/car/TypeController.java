@@ -1,6 +1,6 @@
 package com.example.ren.go.infrastructure.api.controller.car;
 
-import com.example.ren.go.application.TypeAplication;
+import com.example.ren.go.application.car.TypeAplication;
 import com.example.ren.go.domain.entites.car.Type;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
