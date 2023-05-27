@@ -4,6 +4,8 @@ import com.example.ren.go.domain.entites.car.StatesCarEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 @Entity
 
@@ -19,6 +21,12 @@ public class CarDTO {
     @Column(name = "states_car")
     private StatesCarEnum statesCar;
     private  Double basePrice;
+
+    @PrePersist
+    private void generateState() {
+
+        this.statesCar = StatesCarEnum.NOT_RENTED;
+    }
 
 
 }

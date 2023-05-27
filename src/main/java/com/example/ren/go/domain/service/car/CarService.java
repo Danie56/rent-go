@@ -10,7 +10,7 @@ public interface CarService {
     Car getCar(String id);
     List<Car> getAllCar();
     void deleteCar(String id);
-    void setType(String idCar,String idType);
+    void setType(String  idCar,String idType);
     void setState(String idCar, String state);
 
 

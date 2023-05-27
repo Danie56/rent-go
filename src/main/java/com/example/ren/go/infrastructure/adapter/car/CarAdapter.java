@@ -5,7 +5,10 @@ import com.example.ren.go.domain.entites.car.StatesCarEnum;
 import com.example.ren.go.domain.service.car.CarService;
 import com.example.ren.go.infrastructure.dto.car.CarDTO;
 import com.example.ren.go.infrastructure.mapper.car.CarMapper;
+import com.example.ren.go.infrastructure.repository.car.CarDocumentRepository;
 import com.example.ren.go.infrastructure.repository.car.CarRepository;
+import com.example.ren.go.infrastructure.repository.car.DocumentRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,7 @@ import java.util.Optional;
 
 public class CarAdapter implements CarService {
     private  final CarRepository carRepository;
+    private  final CarDocumentRepository carDocumentRepository;
     private  final CarMapper carMapper;
 
     @Override
@@ -42,8 +46,10 @@ public class CarAdapter implements CarService {
         return peoples.stream().map(carMapper::toCarEntity).toList();
     }
     @Override
+    @Transactional
 
     public void deleteCar(String id) {
+        carDocumentRepository.deleteCarDocument(id);
 
         carRepository.deleteById(id);
     }
