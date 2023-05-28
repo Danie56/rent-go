@@ -58,7 +58,7 @@ public class CarAdapter implements CarService {
     public void setType(String idCar, String idType) {
         Optional<CarDTO>carOptional = carRepository.findById(idCar);
         Car car = carMapper.toCarEntity(carOptional.get());
-        car.setIdType(idType);
+        car.setType(idType);
         carRepository.save(carMapper.toCarDto(car));
 
 

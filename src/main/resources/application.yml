@@ -16,6 +16,13 @@ spring:
     password: root
     test-on-borrow: true
     validation-query: SELECT 1 FROM dual
+  spring:
+    data:
+      mongodb:
+        host: localhost
+        port: 27017
+        database: mongodb
+
   jpa:
     properties:
       hibernate:

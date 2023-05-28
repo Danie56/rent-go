@@ -16,7 +16,7 @@ public class CarDTO {
     private  String brand;
     private  String year;
     private  Long mileage;
-    private  String idType;
+    private  String type;
     @Enumerated(EnumType.STRING)
     @Column(name = "states_car")
     private StatesCarEnum statesCar;
