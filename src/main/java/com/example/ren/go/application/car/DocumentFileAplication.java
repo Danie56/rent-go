@@ -21,9 +21,9 @@ public class DocumentFileAplication {
     public void loardDocuments(List<MultipartFile> multipartFile, String idCar)  {
         documentFileService.loardDocuments(multipartFile,idCar);
     }
-    public List<MultipartFile> loardDocumentsByCar(String idCar)  {
+    /*public List<MultipartFile> loardDocumentsByCar(String idCar)  {
         return documentFileService.loardDocumentsByCar(idCar);
-    }
+    }*/
 
 
 

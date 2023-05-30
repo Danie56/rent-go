@@ -1,5 +1,4 @@
 package com.example.ren.go.infrastructure.adapter.car;
-
 import com.example.ren.go.domain.entites.car.Car;
 import com.example.ren.go.domain.entites.car.StatesCarEnum;
 import com.example.ren.go.domain.service.car.CarService;
@@ -7,7 +6,6 @@ import com.example.ren.go.infrastructure.dto.car.CarDTO;
 import com.example.ren.go.infrastructure.mapper.car.CarMapper;
 import com.example.ren.go.infrastructure.repository.car.CarDocumentRepository;
 import com.example.ren.go.infrastructure.repository.car.CarRepository;
-import com.example.ren.go.infrastructure.repository.car.DocumentRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -49,7 +47,6 @@ public class CarAdapter implements CarService {
     @Transactional
 
     public void deleteCar(String id) {
-        carDocumentRepository.deleteCarDocument(id);
 
         carRepository.deleteById(id);
     }
