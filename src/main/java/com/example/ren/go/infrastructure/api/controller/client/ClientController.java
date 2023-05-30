@@ -29,7 +29,7 @@ public class ClientController {
 
     }
     @PutMapping("/set_credit_card")
-            public void updateDocument(@Param("id") String id, @Param("idCreditCard") String idCreditCard){
+    public void updateDocument(@Param("idClient") String id, @Param("idCreditCard") String idCreditCard){
         clientAplication.setCreditCard(id,idCreditCard);
     }
     @PostMapping("/save_credit_card")

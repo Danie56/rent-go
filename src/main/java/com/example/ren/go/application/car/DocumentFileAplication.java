@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -16,6 +17,12 @@ public class DocumentFileAplication {
 
     public void loardDocument(MultipartFile multipartFile, String idCar) throws IOException {
         documentFileService.loardDocument(multipartFile,idCar);
+    }
+    public void loardDocuments(List<MultipartFile> multipartFile, String idCar)  {
+        documentFileService.loardDocuments(multipartFile,idCar);
+    }
+    public List<MultipartFile> loardDocumentsByCar(String idCar)  {
+        return documentFileService.loardDocumentsByCar(idCar);
     }
 
 

@@ -11,6 +11,8 @@ import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class DocumentFileAdapter implements DocumentFileService {
@@ -29,6 +31,21 @@ public class DocumentFileAdapter implements DocumentFileService {
             documentFile.setIdCar(idCar);
             documentFile.setIdDocument(fileId.toString());
             mongoDocumentFileRepository.save(documentFileMapper.toDto(documentFile));
+        }catch (Exception e){
+            System.out.println("Error");
+
+        }
+
+
+    }
+    @Override
+
+    public void loardDocuments(List<MultipartFile> multipartFiles, String idCar)  {
+        try {
+           for(MultipartFile file : multipartFiles) {
+
+               this.loardDocument(file,idCar);
+            }
 
 
 

@@ -13,6 +13,7 @@ public class Rent {
     private LocalDateTime departureDate;
     private LocalDateTime  entryDate;
     private double  price;
+    private String  idContract;
     private boolean isRentClosed;
 
 
