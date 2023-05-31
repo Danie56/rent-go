@@ -3,6 +3,7 @@ package com.example.ren.go.application.car;
 import com.example.ren.go.domain.entites.car.Car;
 import com.example.ren.go.domain.service.car.CarService;
 import lombok.AllArgsConstructor;
+import org.bson.Document;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,6 +33,9 @@ public class CarAplication {
     }
     public void setState(String idCar, String state){
         carService.setState(idCar,state);
+    }
+    public List<Document> getDocumentsByCar(String idCar){
+        return carService.getDocumentsByCar(idCar);
     }
 
 

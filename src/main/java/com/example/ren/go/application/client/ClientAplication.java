@@ -20,8 +20,8 @@ public class ClientAplication {
     public void setCreditCard(String id, String idCredidCard){
         clientService.setCreditCard(id,idCredidCard);
     }
-    public void saveCreditCar(CreditCard creditCard){
-        clientService.saveCreditCard(creditCard);
+    public String saveCreditCar(CreditCard creditCard){
+        return clientService.saveCreditCard(creditCard);
     }
 
 

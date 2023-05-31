@@ -8,6 +8,6 @@ public interface ClientService {
     void saveClient(Client client);
     Client getClient(String id);
     void setCreditCard(String id,String idCreditCard);
-    void saveCreditCard(CreditCard creditCard);
+    String saveCreditCard(CreditCard creditCard);
 
 }

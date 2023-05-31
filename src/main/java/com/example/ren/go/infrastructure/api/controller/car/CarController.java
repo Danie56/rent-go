@@ -60,6 +60,12 @@ public class CarController {
 
 
     }
+    @GetMapping("/get_documents_by_car")
+    public void getDocumentsByCar (@Param("idCar") String idCar) {
+        carAplication.getDocumentsByCar(idCar);
+
+
+    }
 
 
 

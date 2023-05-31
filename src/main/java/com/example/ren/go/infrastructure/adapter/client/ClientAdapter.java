@@ -53,9 +53,10 @@ public class ClientAdapter implements ClientService {
     }
 
     @Override
-    public void saveCreditCard(CreditCard creditCard) {
+    public String saveCreditCard(CreditCard creditCard) {
 
         creditCardRepository.save(creditCardMapper.toCreditCardDto(creditCard));
+        return creditCard.getCardNumber();
 
     }
 }
